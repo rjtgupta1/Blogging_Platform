@@ -3,10 +3,16 @@ body{
   padding: 0;
 }
 
+/* Navbar starts */
+
 .logo{
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
+}
+.logo a{
+  text-decoration: none;
+  color: black;
   &:hover{
     transition: color 0.5s ease-in-out;
     color: aquamarine;
@@ -20,7 +26,7 @@ body{
   padding: 30px 0px;
 }
 
-.navlinks{
+.navlinks{ 
   display: flex;
   gap: 30px;
 }
@@ -33,3 +39,119 @@ body{
     color: aquamarine;
   }
 }
+
+/* Navbar style ends */
+
+/* Blog style */
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 87px);
+  width: 100%;
+  /* background-color: aqua; */
+}
+
+.form-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(47, 161, 133);
+  width: 50%;
+  height: 80%;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form input{
+  height: 5vh;
+  border-radius: 10px;
+  border: none;
+}
+
+.form textarea{
+  width: 30vw;
+  height: 30vh;
+  border-radius: 10px;
+  border: none;
+}
+
+.form button{
+  width: 100%;
+  height: 40px;
+  border-radius: 15px;
+  border: none;
+  background-color: aquamarine;
+  color: rgb(47, 161, 133);
+  font-size: 20px;
+  margin: 10px 0px;
+  &:hover{
+    cursor: pointer;
+    color: rgb(41, 97, 83);
+  }
+}
+
+/* Blog style ends */
+
+/* Admin page */
+
+.admin-login {
+  max-width: 400px;
+  min-height: 320px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-login h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+  text-align: center;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  background-color:rgb(47, 161, 133);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: aquamarine;
+}
+
+/* Admin page ends */
