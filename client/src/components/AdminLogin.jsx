@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function AdminLogin() {
@@ -7,12 +7,19 @@ function AdminLogin() {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
+  useEffect(()=>{
+    let login = localStorage.getItem('login');
+    if(login){
+      navigate('/admin/dashboard');
+    }
+  })
+
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (username === 'admin' && password === 'admin') {
       alert('Login successful! Redirecting to the admin dashboard...');
-      navigate('/admin-dashboard'); // redirecting after successful login
+      localStorage.setItem("login",true);
+      navigate('/admin/dashboard'); // redirecting after successful login
     } else {
       setError('Invalid username or password');
     }

@@ -5,6 +5,7 @@ import Blog from './components/Blog';
 import Home from './components/Home';
 import AdminLogin from './components/AdminLogin';
 import AdminDashboard from './components/AdminDashboard';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   return (
@@ -13,9 +14,10 @@ function App() {
       <Header />
         <Routes>
           <Route exact path='/' Component={Home}/>
-          <Route path='/admin-login' Component={AdminLogin} />
-          <Route path='/admin-dashboard' Component={AdminDashboard} />
-          <Route path='/create-a-blog' Component={Blog} />
+          <Route path='/admin' Component={AdminLogin} />
+          <Route path='/admin/dashboard' element={ <ProtectedRoute Component={AdminDashboard} /> } />
+          <Route path='/create-a-blog' element={ <ProtectedRoute Component={Blog} /> } />
+
         </Routes>
       </Router>
     </>
