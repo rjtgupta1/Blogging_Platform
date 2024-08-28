@@ -1,3 +1,7 @@
+:root{
+  --primary--color: rgb(47, 161, 133);
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -20,7 +24,7 @@ body{
 }
 
 .navbar{
-  background-color: rgb(47, 161, 133);
+  background-color: var(--primary--color);
   display: flex;
   justify-content: space-around;
   padding: 30px 0px;
@@ -50,14 +54,13 @@ body{
   align-items: center;
   height: calc(100vh - 87px);
   width: 100%;
-  /* background-color: aqua; */
 }
 
 .form-container{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(47, 161, 133);
+  background-color: var(--primary--color);
   width: 50%;
   height: 80%;
   border-radius: 15px;
@@ -90,7 +93,7 @@ body{
   border-radius: 15px;
   border: none;
   background-color: aquamarine;
-  color: rgb(47, 161, 133);
+  color: var(--primary--color);
   font-size: 20px;
   margin: 10px 0px;
   &:hover{
@@ -101,7 +104,7 @@ body{
 
 /* Blog style ends */
 
-/* Admin page */
+/* AdminLogin page */
 
 .admin-login {
   max-width: 400px;
@@ -143,7 +146,7 @@ button {
   width: 100%;
   margin-top: 20px;
   padding: 10px;
-  background-color:rgb(47, 161, 133);
+  background-color:var(--primary--color);
   color: white;
   border: none;
   border-radius: 5px;
@@ -154,4 +157,56 @@ button:hover {
   background-color: aquamarine;
 }
 
-/* Admin page ends */
+/* AdminLogin page ends */
+
+/* Admin Dashboard page */
+
+.dashboard-container{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  justify-content: center;
+  color: var(--primary--color);
+}
+
+.options{
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+  height: calc(100vh - 172px);
+}
+
+.option{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  height: 100px;
+  width: 200px;
+  color: black;
+  cursor: pointer;
+  background-color: var(--primary--color);
+  padding: 20px;
+  border-radius: 20px;
+  border: none;
+  &:hover{
+    color: aquamarine;
+    transition: color 0.5s ease-in-out;
+  }
+}
+
+.dashboard{
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+}
+
+.dashboard-heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Admin Dashboard page ends */
