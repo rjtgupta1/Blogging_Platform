@@ -1,5 +1,6 @@
 import express from 'express'
 import post from '../controllers/post.js';
+import viewBlog from '../controllers/viewBlog.js';
 const router = express.Router();
 
 router.get('/',(req,res)=>{
@@ -8,5 +9,6 @@ router.get('/',(req,res)=>{
 
 // creating a blog post
 router.post('/api/post',post)
+router.get('/api/posts',viewBlog)
 
 export default router;
