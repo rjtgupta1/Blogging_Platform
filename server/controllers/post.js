@@ -9,8 +9,8 @@ const post = async (req,res)=>{
     })
 
     try {
-        const response = await newPost.save();
-        if(response[0])
+        const result = await newPost.save();
+        if(result.title)
             res.status(200).json({msg:"post created"});
         else
             res.status(500).json({msg:"Internal server error"});
