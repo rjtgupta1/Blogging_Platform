@@ -16,8 +16,7 @@ function App() {
           <Route exact path='/' Component={Home}/>
           <Route path='/admin' Component={AdminLogin} />
           <Route path='/admin/dashboard' element={ <ProtectedRoute Component={AdminDashboard} /> } />
-          <Route path='/create-a-blog' element={ <ProtectedRoute Component={Blog} /> } />
-
+          <Route path='/admin/dashboard/create-blog' element={ <ProtectedRoute Component={Blog} /> } />
         </Routes>
       </Router>
     </>

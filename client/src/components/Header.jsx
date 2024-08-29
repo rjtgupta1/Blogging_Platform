@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 const Header = () => {
 
-  const [login,setLogin] = useState();
   useEffect(()=>{
-    let login = localStorage.getItem('login');
-    setLogin(login);
+    if(localStorage.getItem('login')){
+      document.getElementById('logout').style.display='block';
+    }
   },[])
 
   const handleLogout = ()=>{
     localStorage.removeItem('login');
-    setLogin(false);
+    document.getElementById('logout').style.display='none';
   }
 
   return (
@@ -23,9 +23,7 @@ const Header = () => {
         <div className="navlinks">
           <Link to="/">Home</Link>
           <Link to="/admin">Admin Dashboard</Link>
-          {
-            login?<Link onClick={handleLogout}>Logout</Link>:null
-          }
+          <Link id="logout" style={{display:'none'}} onClick={handleLogout}>Logout</Link>
         </div>
       </nav>
     </>
