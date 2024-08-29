@@ -4,16 +4,14 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import mongoose from 'mongoose';
+import router from './routes/routes.js';
 
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
+app.use(router);
 
 const port = process.env.PORT;
-
-app.get('/',(req,res)=>{
-    res.status(200).json({msg:"This is working fine"});
-})
 
 // database & server connection
 try {
@@ -22,5 +20,5 @@ try {
         console.log(`Server is running on port ${port}`);
     })
 } catch (error) {
-    console.log(error);
+    console.log(error.message);
 }
