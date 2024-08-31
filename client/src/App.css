@@ -273,3 +273,21 @@ button:hover {
 }
 
 /* singleBlog ends */
+
+/* blog action */
+
+.action{
+  display: flex;
+  position: relative;
+  bottom: 120px;
+  left: 700px;
+  gap: 20px;
+}
+
+.action a{
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+/* blog action end */

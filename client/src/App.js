@@ -7,6 +7,7 @@ import AdminLogin from './components/AdminLogin';
 import AdminDashboard from './components/AdminDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
 import SingleBlog from './pages/SingleBlog';
+import UpdateBlog from './pages/UpdateBlog';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path='/admin/dashboard' element={ <ProtectedRoute Component={AdminDashboard} /> } />
           <Route path='/admin/dashboard/create-blog' element={ <ProtectedRoute Component={Blog} /> } />
           <Route path='/blog/:id' element={ <SingleBlog /> } />
+          <Route path='/admin/dashboard/update-blog/:id' element={ <ProtectedRoute Component={UpdateBlog} /> } />
         </Routes>
       </Router>
     </>
