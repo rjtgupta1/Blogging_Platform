@@ -3,6 +3,7 @@ import post from '../controllers/post.js';
 import viewBlog from '../controllers/viewBlog.js';
 import deletePost from '../controllers/deletePost.js';
 import update from '../controllers/update.js';
+import viewSingleBlog from '../controllers/viewSingleBlog.js';
 const router = express.Router();
 
 router.get('/',(req,res)=>{
@@ -14,5 +15,6 @@ router.post('/api/post',post)
 router.get('/api/posts',viewBlog)
 router.delete('/api/delete',deletePost)
 router.put('/api/update',update)
+router.post('/api/single-post',viewSingleBlog)
 
 export default router;

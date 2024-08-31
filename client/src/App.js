@@ -6,6 +6,7 @@ import Home from './components/Home';
 import AdminLogin from './components/AdminLogin';
 import AdminDashboard from './components/AdminDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
+import SingleBlog from './pages/SingleBlog';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/admin' Component={AdminLogin} />
           <Route path='/admin/dashboard' element={ <ProtectedRoute Component={AdminDashboard} /> } />
           <Route path='/admin/dashboard/create-blog' element={ <ProtectedRoute Component={Blog} /> } />
+          <Route path='/blog/:id' element={ <SingleBlog /> } />
         </Routes>
       </Router>
     </>

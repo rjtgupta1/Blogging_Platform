@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Card = ({blog}) => {
   return (
@@ -12,7 +13,7 @@ const Card = ({blog}) => {
         </h5>
       </div>
       <div>
-        <button className='btn'>Read more...</button>
+        <Link to={`/blog/${blog._id}`} className='btn'>Read more...</Link>
       </div>
     </div>
   )
