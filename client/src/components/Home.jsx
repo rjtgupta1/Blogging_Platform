@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <div className='home'>
       {
-        blogs.map(blog => <Card key={blog._id} blog={blog} />)
+       blogs[0] ? blogs.map(blog => <Card key={blog._id} blog={blog} />) : (<h3>No blogs found</h3>)
       }
     </div>
   )

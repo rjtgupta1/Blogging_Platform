@@ -8,6 +8,7 @@ import AdminDashboard from './components/AdminDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
 import SingleBlog from './pages/SingleBlog';
 import UpdateBlog from './pages/UpdateBlog';
+import DeleteBlog from './helpers/DeleteBlog.js';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='/admin/dashboard/create-blog' element={ <ProtectedRoute Component={Blog} /> } />
           <Route path='/blog/:id' element={ <SingleBlog /> } />
           <Route path='/admin/dashboard/update-blog/:id' element={ <ProtectedRoute Component={UpdateBlog} /> } />
+          <Route path='/admin/dashboard/delete-blog/:id' element={ <ProtectedRoute Component={DeleteBlog} /> } />
         </Routes>
       </Router>
     </>
