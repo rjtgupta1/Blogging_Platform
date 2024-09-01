@@ -1,4 +1,3 @@
-import React from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
 const DeleteBlog = () => {
@@ -23,13 +22,13 @@ const DeleteBlog = () => {
             navigate('/')
         })
     }
-    
-    
-    const userConfirmed = window.confirm("Do you want to delete this blog?");
-    if(userConfirmed)
-        deleteBlog()
+
+    const admin = localStorage.getItem('login')
+
+    if(admin)
+        deleteBlog();
     else
-        navigate('/')
+        navigate('/admin')
 
 }
 

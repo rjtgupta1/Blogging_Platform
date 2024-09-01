@@ -18,8 +18,6 @@ const AdminDashboard = () => {
         <div className="options">
             <Link className='option' to="/">View Blog</Link>
             <Link className="option" to="/admin/dashboard/create-blog" >Create a Blog</Link>
-            <Link className="option" to="/admin/dashboard/update-blog">Update a Blog</Link>
-            <Link className="option">Delete a Blog</Link>
         </div>
       </div>
     </div>

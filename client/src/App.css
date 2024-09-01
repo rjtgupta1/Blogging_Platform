@@ -5,6 +5,7 @@
 body{
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 /* Navbar starts */
@@ -264,7 +265,10 @@ button:hover {
   flex-direction: column;
   padding: 0px 30px;
   width: 60%;
-  background-color: aliceblue;
+  background-color: var(--primary--color);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .singleBlog h5{

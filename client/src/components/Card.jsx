@@ -29,9 +29,9 @@ const Card = ({blog}) => {
         admin
         ?
         <div className="action">
-        <Link to={`/admin/dashboard/update-blog/${blog._id}`}>Update</Link>
-        <Link to={`/admin/dashboard/delete-blog/${blog._id}`}>Delete</Link>
-      </div>
+          <Link to={`/admin/dashboard/update-blog/${blog._id}`}>Update</Link>
+          <Link to={`/admin/dashboard/delete-blog/${blog._id}`}>Delete</Link>
+        </div>
       :
       null
       }
